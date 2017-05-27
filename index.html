@@ -1,42 +1,65 @@
 <!DOCTYPE html>
-<html lang=en>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, intial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
-		<link href="bootstrap.css" type="text/css" rel="stylesheet"/>
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-		<title>CFI Finance</title>
-	</head>
-	<body>
-		<div class="container-fluid">
-			<div class="title">
-				<h1>Cfi Finance</h1>
-			</div>
-			<div id="row1">
-			<div class="row">
-				<div class="col-md-4" style="background-color: #2c2c31; border-left-style: none;"><a href="#">Clubs</a></div>
-				<div class="col-md-4" style="background-color: #5c2c31;"><a href="#">Contact Us</a></div>
-				<div class="col-md-4" style="background-color: #8c2c31; border-right-style: none;"><a href="#">About</a></div>
-			</div>
-			</div>
-			<div id="row2">
-				<div class="row" >
-					<div class="col-md-4" style="background-color: #3c3249;border-left-style: none;"><a href="#">Resources</a></div>
-					<div class="col-md-4" style="background-color: #6c3249;"><a href="#">Acheivements</a></div>
-					<div class="col-md-4" style="background-color: #9c3249;border-right-style: none;"><a href="#">Gallery</a></div>
-				</div>
-			</div>
-			<div id="row3">
-				<div class="row">
-					<div class="col-md-4" style="background-color: #ed2939;border-left-style: none;"><a href="#">Competitions</a></div>
-					<div class="col-md-4" style="background-color: #ed5939;"><a href="#">Archives</a></div>
-					<div class="col-md-4" style="background-color: #ed8939;border-right-style: none;"><a href="#">Connections</a></div>
-				</div>
-			</div>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="	sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
-	</body>
+<html lang="en">
+<head>
+  <title>Sign Up!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="form.css" type="text/css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    names = ["email","pswrd","r-pswrd","ph-no"];
+    function submitValidate(){
+      var a = document.forms["myform"]["email"].value;
+      var b = document.forms["myform"]["pswrd"].value;
+      var c = document.forms["myform"]["r-pswrd"].value;
+      var d = document.forms["myform"]["ph-no"].value;
+      if(a=="")
+        {alert("Please Enter the Username");
+        return false;
+        }
+      if(b=="")
+          {alert("Please Enter the Password");
+          return false;
+          }
+      if(c=="")
+            {alert("Please enter  'Repeat Password'");
+            return false;
+            }
+      if(c!=b){
+        alert("Passwords do not match");
+        return false;
+      }
+      else {
+        alert("Good");
+        window.open("weather.html");
+        return true;
+      }
+    };
+  </script>
+</head>
+<body>
+<div class="container-fluid">
+  <h3>Sign Up</h3>
+  <form name="myform" onsubmit="return submitValidate()">
+    <div class="form-group">
+    <label>Username</label><br/>
+    <input type="text" placeholder="Enter Email" name="email"><br/>
+    <label>Password</label><br/>
+    <input type="password" placeholder="Enter Password" name="pswrd"><br/>
+    <label>Repeat Password</label><br/>
+    <input type="password" placeholder="Re-enter Password" name="r-pswrd"><br/>
+    <label>Phone Number</label><br/>
+    <input type="text" placeholder="Enter Phone Number" name="ph-no" ><br/>
+    <label>Gender</label><br/>
+    <label><input type="radio" name="gender" value="Male" checked>Male</label>
+    <label><input type="radio" name="gender" value="Female" />Female</label><br/>
+    <button type="Submit">Submit</button>
+    <input type="reset" />
+  </div>
+  </form>
+</div>
+
+</body>
 </html>
