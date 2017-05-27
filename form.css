@@ -1,24 +1,25 @@
 .container-fluid{
-  float: right;
-  margin-right: 10px;
-  font-size: 15px;
-  font-family: 'Roboto Condensed', sans-serif;
-  color:white;
+  font-size: 20px;
+
 }
 h3{
+  font-size: 30px;
   margin-bottom: 30px;
+  text-transform: capitalize;
+  font-weight: bolder;
 }
-label{
-  margin-bottom: 20px;
-
-
+p{
+  font-weight: bold;
 }
 input{
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .form-group{
   font-family: 'Roboto Condensed', sans-serif;
 }
 body{
-  background-color:#a21f4d;
+  background: -moz-linear-gradient(right, #b3ecec, #3bd6c6); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #b3ecec , #3bd6c6);
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
 }
