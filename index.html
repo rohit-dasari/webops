@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="form.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
-    names = ["email","pswrd","r-pswrd","ph-no"];
     function submitValidate(){
       var a = document.forms["myform"]["email"].value;
       var b = document.forms["myform"]["pswrd"].value;
@@ -32,7 +32,6 @@
         return false;
       }
       else {
-        alert("Good");
         window.open("weather.html");
         return true;
       }
@@ -42,21 +41,32 @@
 <body>
 <div class="container-fluid">
   <h3>Sign Up</h3>
-  <form name="myform" onsubmit="return submitValidate()">
+  <form name="myform" onsubmit="return submitValidate()" method="POST">
     <div class="form-group">
-    <label>Username</label><br/>
+    <p>Username</p>
     <input type="text" placeholder="Enter Email" name="email"><br/>
-    <label>Password</label><br/>
+    </div>
+    <div class="form-group">
+    <p>Password</p>
     <input type="password" placeholder="Enter Password" name="pswrd"><br/>
-    <label>Repeat Password</label><br/>
+  </div>
+    <div class="form-group">
+    <p>Repeat Password</p>
     <input type="password" placeholder="Re-enter Password" name="r-pswrd"><br/>
-    <label>Phone Number</label><br/>
+  </div>
+    <div class="form-group">
+    <p>Phone Number</p>
     <input type="text" placeholder="Enter Phone Number" name="ph-no" ><br/>
-    <label>Gender</label><br/>
-    <label><input type="radio" name="gender" value="Male" checked>Male</label>
-    <label><input type="radio" name="gender" value="Female" />Female</label><br/>
+  </div>
+    <div class="form-group">
+    <p>Gender:</p>
+    <p><input type="radio" name="gender" value="Male" checked>Male</p>
+    <p><input type="radio" name="gender" value="Female" />Female</p><br/>
+  </div>
+    <div class="form-group">
     <button type="Submit">Submit</button>
     <input type="reset" />
+  </div>
   </div>
   </form>
 </div>
