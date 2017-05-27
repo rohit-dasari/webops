@@ -18,4 +18,6 @@ input{
 .form-group{
   font-family: 'Roboto Condensed', sans-serif;
 }
+body{
+  background-color:#a21f4d;
 }
